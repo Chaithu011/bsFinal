@@ -27,6 +27,11 @@ INSTALLATION
  * Added database bsFinal.sql
  * Clear all caches
 
+  Super Admin Credentials
+
+  Username - admin
+
+  Password - 123
 
 CONFIGURATION
 -------------
@@ -42,6 +47,7 @@ path - Administration > configuration > Blood Sugar module Settings
 For site admin( set role Site admin) - once login it redirects to Admin Dashboard(/dashboard/admin)
 
 For User (set role public) - once login it redirects to Admin Dashboard(/dashboard/user)
+
 
 
 
