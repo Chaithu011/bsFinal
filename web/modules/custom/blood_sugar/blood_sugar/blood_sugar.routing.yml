@@ -1,7 +1,7 @@
 blood_sugar.dashboard:
   path: '/dashboard'
   defaults:
-    _controller: '\Drupal\blood_sugar\Controller\BloodSugarController::Dashboard'
+    _controller: '\Drupal\blood_sugar\Controller\BloodSugarController::adminDashboard'
     _title: 'My Space'
   requirements:
     _permission: 'access content'
@@ -12,7 +12,7 @@ blood_sugar.user_dashboard:
     _controller: '\Drupal\blood_sugar\Controller\BloodSugarController::userDashboard'
     _title: 'My Space'
   requirements:
-    _permission: 'manage all user functions'
+    _role: 'public'
 
 entity.blood_sugar_record.add_form:
   path: '/dashboard/blood_sugar/add_blood_sugar_record'
@@ -50,7 +50,7 @@ blood_sugar.admin_dashboard:
     _controller: '\Drupal\blood_sugar\Controller\BloodSugarController::adminDashboard'
     _title: 'Admin Dashboard'
   requirements:
-    _permission: 'access content'
+    _permission: 'manage all admin functions'
 
 blood_sugar.settings_form:
   path: '/admin/config/blood_sugar/settings'

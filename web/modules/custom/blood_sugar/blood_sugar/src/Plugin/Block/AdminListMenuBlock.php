@@ -40,7 +40,7 @@ class AdminListMenuBlock extends BlockBase {
           '/admin/config/blood_sugar/settings' => 'Configure Settings',
         ];
     }
-    if ($user->hasPermission('manage all user functions')) {
+    if ($user->hasRole('public')) {
       $link_option['attributes']['class'][] = 'user-operations-class';
       $url_list = [
         '/dashboard/blood_sugar/add_prescription' => 'Add Prescription',
