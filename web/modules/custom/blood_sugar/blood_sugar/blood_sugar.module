@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * @file
+ * Contains blood_sugar.module.
+ */
+
+use Drupal\Core\Url;
+use Drupal\user\UserInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Field\FieldFilteredMarkup;
+use \Symfony\Component\HttpFoundation\Response;
+use \Symfony\Component\HttpFoundation\Cookie;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_user_login().
+ *
+ * Redirects users to dashboard after login.
+ */
+
+function blood_sugar_user_login(UserInterface $account) {
+	\Drupal::cache('menu')->invalidateAll(); // for clearing the menu cache      
+	\Drupal::service('plugin.manager.menu.link')->rebuild(); // rebuild the menu    
+
+	$uid = \Drupal::currentUser()->id();
+	$role = \Drupal::currentUser()->getRoles();
+	// Redirect to user profile page if profile is not completed.
+	$uid = \Drupal::currentUser()->id();
+	$role = \Drupal::currentUser()->getRoles();
+	if (in_array('public', $role)) {
+		$dest = Url::fromRoute('blood_sugar.user_dashboard')->toString();
+	}
+	else {
+		$dest = Url::fromRoute('blood_sugar.admin_dashboard')->toString();
+	}
+	// Ignore password reset.
+	$route_name = \Drupal::routeMatch()->getRouteName();
+	if ($route_name !== 'user.reset.login') {
+		// Do not interfere if a destination was already set.
+		$current_request = \Drupal::service('request_stack')->getCurrentRequest();
+		if (!$current_request->query->get('destination')) {
+			// Default login destination to the dashboard.
+			$current_request->query->set(
+				'destination',
+				$dest
+			);
+		}
+	}
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function blood_sugar_form_user_register_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+	$form['account']['name']['#title'] = t('First name');
+	$form['user_picture']['#access'] = FALSE;
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function blood_sugar_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+	$formId = $form['#id'];
+	$form_id_array = ['views-exposed-form-blood-sugar-level-block-2', 'views-exposed-form-prescription-list-block-1', 'views-exposed-form-user-list-block-1', 'views-exposed-form-prescription-list-block-2'];
+	if (in_array($formId, $form_id_array)) {
+		$form['#attached']['library'][] = 'blood_sugar/blood_sugar_library';
+		$form['#info']['filter-mail']['label'] = '';
+		// dump($form);die;
+	}
+}

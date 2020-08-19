@@ -1,0 +1,12 @@
+blood_sugar_library:
+  version: 1.x
+  css:
+    theme:
+      css/blood_sugar.css: {}
+      https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css: {external: TRUE}
+  js:
+    js/blood_sugar.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.dialog.ajax
+    - core/jquery.form'

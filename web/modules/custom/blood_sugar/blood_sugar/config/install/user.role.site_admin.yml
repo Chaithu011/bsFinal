@@ -1,0 +1,25 @@
+uuid: 2442aab4-c3fd-4c43-8228-f7727fb015ee
+langcode: en
+status: true
+dependencies: {  }
+id: site_admin
+label: 'Site Admin'
+weight: 4
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'access tour'
+  - 'access user profiles'
+  - 'administer account settings'
+  - 'administer permissions'
+  - 'administer site configuration'
+  - 'administer users'
+  - 'cancel account'
+  - 'change own username'
+  - 'manage all Admin functions'
+  - 'manage all admin functions'
+  - 'select account cancellation method'
+  - 'view all BloodSugarRecord entities'
+  - 'view all prescription entities'
+  - 'view prescription entities'
+  - 'view the administration theme'

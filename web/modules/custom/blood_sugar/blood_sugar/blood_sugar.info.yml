@@ -1,0 +1,6 @@
+name: 'Blood Sugar'
+type: module
+description: 'A custom module to store and manipulate on user''s blood sugar record'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Custom'
