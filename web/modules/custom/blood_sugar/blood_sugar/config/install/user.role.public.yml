@@ -1,0 +1,20 @@
+uuid: 710ab3eb-5c09-4402-96cf-2e40178f8199
+langcode: en
+status: true
+dependencies: {  }
+id: public
+label: public
+weight: 3
+is_admin: null
+permissions:
+  - 'add prescription entities'
+  - 'delete blood sugar record entities'
+  - 'delete prescription entities'
+  - 'edit blood sugar record entities'
+  - 'edit prescription entities'
+  - 'manage all user functions'
+  - 'view all BloodSugarRecord entities'
+  - 'view all prescription entities'
+  - 'view blood sugar record entities'
+  - 'view prescription entities'
+

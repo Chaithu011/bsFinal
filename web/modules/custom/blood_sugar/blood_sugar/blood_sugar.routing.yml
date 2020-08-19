@@ -1,0 +1,62 @@
+blood_sugar.dashboard:
+  path: '/dashboard'
+  defaults:
+    _controller: '\Drupal\blood_sugar\Controller\BloodSugarController::Dashboard'
+    _title: 'My Space'
+  requirements:
+    _permission: 'access content'
+
+blood_sugar.user_dashboard:
+  path: '/dashboard/user'
+  defaults:
+    _controller: '\Drupal\blood_sugar\Controller\BloodSugarController::userDashboard'
+    _title: 'My Space'
+  requirements:
+    _permission: 'manage all user functions'
+
+entity.blood_sugar_record.add_form:
+  path: '/dashboard/blood_sugar/add_blood_sugar_record'
+  defaults:
+    # _controller: '\Drupal\efs_organization\Controller\UserOrganization::content'
+    _entity_form: blood_sugar_record.add
+    _title: 'Add Blood Sugar Record'
+  requirements:
+    # _custom_access:  '\Drupal\efs_organization\Controller\UserOrganization::accessNewUser'
+    _permission: 'add blood sugar record entities'
+
+entity.prescription.add_form:
+  path: '/dashboard/blood_sugar/add_prescription'
+  defaults:
+    # _controller: '\Drupal\efs_organization\Controller\UserOrganization::content'
+    _entity_form: prescription.add
+    _title: 'Add Prescription'
+  requirements:
+    # _custom_access:  '\Drupal\efs_organization\Controller\UserOrganization::accessNewUser'
+    _permission: 'add prescription entities'
+  
+entity.prescription.delete:
+  path: '/dashboard/blood-sugar/prescription-delete'
+  defaults:
+    # _controller: '\Drupal\efs_organization\Controller\UserOrganization::content'
+    _entity_form: prescription.delete
+    _title: 'Delete Prescription'
+  requirements:
+    # _custom_access:  '\Drupal\efs_organization\Controller\UserOrganization::accessNewUser'
+    _permission: 'delete prescription entities'
+
+blood_sugar.admin_dashboard:
+  path: '/dashboard/admin'
+  defaults:
+    _controller: '\Drupal\blood_sugar\Controller\BloodSugarController::adminDashboard'
+    _title: 'Admin Dashboard'
+  requirements:
+    _permission: 'access content'
+
+blood_sugar.settings_form:
+  path: '/admin/config/blood_sugar/settings'
+  defaults:
+    _form: '\Drupal\blood_sugar\Form\SettingsForm'
+    _title: 'SettingsForm'
+  requirements:
+    _permission: 'manage all Admin functions'
+

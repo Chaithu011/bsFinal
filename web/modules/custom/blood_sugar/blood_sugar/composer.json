@@ -1,0 +1,13 @@
+{
+    "name": "blood_sugar",
+    "type": "drupal-module",
+    "description": "A custom module to store and manipulate on user's blood sugar record",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/blood_sugar",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/blood_sugar",
+        "source": "http://cgit.drupalcode.org/blood_sugar"
+    }
+}

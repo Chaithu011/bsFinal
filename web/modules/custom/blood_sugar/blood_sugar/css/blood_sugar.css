@@ -1,0 +1,104 @@
+body {
+    font-size: 14px !important;
+}
+span.label {
+    color: #333;
+}
+input#edit-blood-sugar-value-0-value {
+    width: 75%;
+    margin-top: 12px;
+    padding: 5px;
+    float: left;
+    margin-right: 23px;
+}
+.add-blood-sugar-record #edit-submit {
+    border-radius: inherit;
+    background: #4E9CAF;
+    text-align: center;
+    width: 21%;
+    color: white;
+    padding: 7px;
+}
+.user-operations-class {
+    background: #4E9CAF;
+    padding: 3px;
+    text-align: center;
+    color: white;
+    float: right;
+    margin-top: 21px;
+    width: 225px;
+}
+form#views-exposed-form-prescription-list-block-1 {
+    width: 100% !important;
+    max-width: 83% !important;
+    display: inline-block;
+    box-shadow: none !important;
+    clear: both !important;
+}
+#views-exposed-form-prescription-list-block-1 .form-actions {
+    margin-top: 5px !important;
+    max-width: 20%;
+    float: left;
+    margin-top: 5px;
+    clear: none;
+}
+input#edit-file-name {
+    width: 100%;
+    margin-right: 234px;
+    margin-top: 5px;
+}
+ul#appeal-list-menus {
+    padding: 0px 0px 29px 0px;
+    width: 100%;
+    max-width: 100% !important;
+}
+.admin-operations-class {
+    background: #4E9CAF;
+    text-align: center;
+    color: white;
+    float: left;
+    padding: 5px;
+    width: 25% !important;
+    margin-right: 14px;
+}
+form#views-exposed-form-user-list-block-1,
+#views-exposed-form-blood-sugar-level-block-2 {
+    width: 100% !important;
+    max-width: 75% !important;
+    display: inline-block;
+    box-shadow: none !important;
+    clear: both !important;
+}
+#views-exposed-form-user-list-block-1 .form-actions,
+#views-exposed-form-blood-sugar-level-block-2 .form-actions,
+#views-exposed-form-prescription-list-block-2 .form-actions,
+#views-exposed-form-prescription-list-block-1 .form-actions {
+    float: left;
+    clear: none;
+    margin-top: 4px;
+}
+#views-exposed-form-user-list-block-1 .form-text,
+#views-exposed-form-blood-sugar-level-block-2 .form-text,
+#views-exposed-form-prescription-list-block-2 .form-text,
+#views-exposed-form-prescription-list-block-1 .form-text {
+    margin-right: 100px;
+    width: 100%;
+}
+#views-exposed-form-prescription-list-block-2 .form-actions {
+    margin-right: 0.6em;
+    width: 158px;
+    border-radius: inherit;
+    padding: 5px;
+    margin-top: 12px;
+}
+#views-exposed-form-user-list-block-1 .js-form-submit,
+#views-exposed-form-blood-sugar-level-block-2 .js-form-submit,
+#views-exposed-form-prescription-list-block-2 .js-form-submit,
+#views-exposed-form-prescription-list-block-1 .js-form-submit {
+    border-radius: inherit;
+    background: #4E9CAF;
+    color: white;
+}
+.row-count {
+    float: right;
+}

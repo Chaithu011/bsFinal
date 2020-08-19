@@ -1,0 +1,47 @@
+view all prescription entities:
+  title: 'View all Prescription entities'
+
+view all BloodSugarRecord entities:
+  title: 'View all BloodSugarRecord entities'
+
+manage all user functions:
+  title: 'Manage all User functions'
+
+manage all admin functions:
+  title: 'Manage all Admin functions'
+
+add blood sugar record entities:
+  title: 'Create new Blood sugar record entities'
+
+administer blood sugar record entities:
+  title: 'Administer Blood sugar record entities'
+  description: 'Allow to access the administration form to configure Blood sugar record entities.'
+  restrict access: true
+
+delete blood sugar record entities:
+  title: 'Delete Blood sugar record entities'
+
+edit blood sugar record entities:
+  title: 'Edit Blood sugar record entities'
+
+view blood sugar record entities:
+  title: 'View Blood sugar record entities'
+
+
+add prescription entities:
+  title: 'Create new Prescription entities'
+
+administer prescription entities:
+  title: 'Administer Prescription entities'
+  description: 'Allow to access the administration form to configure Prescription entities.'
+  restrict access: true
+
+delete prescription entities:
+  title: 'Delete Prescription entities'
+
+edit prescription entities:
+  title: 'Edit Prescription entities'
+
+view prescription entities:
+  title: 'View Prescription entities'
+
