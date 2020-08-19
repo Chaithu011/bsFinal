@@ -102,3 +102,8 @@ form#views-exposed-form-user-list-block-1,
 .row-count {
     float: right;
 }
+#views-exposed-form-prescription-list-block-1 .form-actions {
+    float: left;
+    clear: none;
+    margin-top: 10px !important;
+}
