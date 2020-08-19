@@ -31,7 +31,7 @@ INSTALLATION
 CONFIGURATION
 -------------
 
-No configuration is needed.
+No configuration is needed
 
 PATH
 -------------
