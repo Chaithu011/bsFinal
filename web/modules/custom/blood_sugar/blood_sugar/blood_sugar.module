@@ -53,7 +53,7 @@ function blood_sugar_user_login(UserInterface $account) {
  * Implements hook_form_BASE_FORM_ID_alter().
  */
 function blood_sugar_form_user_register_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-	$form['account']['name']['#title'] = t('First name');
+	$form['account']['name']['#title'] = t('Full name');
 	$form['user_picture']['#access'] = FALSE;
 }
 
