@@ -60,3 +60,11 @@ blood_sugar.settings_form:
   requirements:
     _permission: 'manage all Admin functions'
 
+blood_sugar.active_user:
+  path: '/dashboard/admin/{id}/manage-user'
+  defaults:
+    _controller: '\Drupal\blood_sugar\Controller\BloodSugarController::manageUser'
+    _title: 'Manage User'
+  requirements:
+    _permission: 'manage all Admin functions'
+

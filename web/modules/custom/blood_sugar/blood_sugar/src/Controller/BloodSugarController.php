@@ -91,4 +91,22 @@ class BloodSugarController extends ControllerBase {
     }
     return $render;
   }
+  /**
+   * manage user for site admin (Extra added for further reference).
+   */
+  public function manageUser($id, Request $request, RouteMatchInterface $route_match) {
+    $user = User::load($id);
+    if ($user->isActive() == 0) {
+      $user->set("status", 1);
+      $user->activate();
+      $this->messenger()->addMessage($this->t('User activated'));
+    }
+    else {
+      $user->set("status", 0);
+      $user->block();
+      $this->messenger()->addMessage($this->t('User deactivated'));
+    }
+    $user->save();
+    return new RedirectResponse(\Drupal::url('blood_sugar.admin_dashboard'));
+  }
 }
