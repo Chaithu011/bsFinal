@@ -239,8 +239,8 @@ display:
           label: 'User status'
           exclude: true
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{status__value}}'
             make_link: false
             path: ''
             absolute: false
@@ -373,7 +373,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if status !=1  %}\r\n<a href='/user/{{ uid }}/edit?destination=/admin/people' class=\"use-ajax\" data-dialog-type=\"modal\" data-dialog-options=\"{&quot;width&quot;:&quot;70%&quot;}\" >Activate</a>\r\n{% else %}\r\n<a href='/user/{{ uid }}/edit?destination=/admin/people' class=\"use-ajax\" data-dialog-type=\"modal\" data-dialog-options=\"{&quot;width&quot;:&quot;70%&quot;}\">Deactivate</a>\r\n{% endif %}"
+            text: "{% if status !='1'%}\r\n<a href='/user/{{ uid }}/edit?destination=/admin/people' class=\"use-ajax\" data-dialog-type=\"modal\" data-dialog-options=\"{&quot;width&quot;:&quot;70%&quot;}\" >Activate</a>\r\n{% else %}\r\n<a href='/user/{{ uid }}/edit?destination=/admin/people' class=\"use-ajax\" data-dialog-type=\"modal\" data-dialog-options=\"{&quot;width&quot;:&quot;70%&quot;}\">Deactivate</a>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
