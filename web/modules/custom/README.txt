@@ -24,7 +24,7 @@ INSTALLATION
 ------------
 
  * git clone https://github.com/Chaithu011/bsFinal.git
- * Added database bsNewDb.sql
+ * Added database bsNewData.sql
  * Clear all caches
 
   Super Admin Credentials
